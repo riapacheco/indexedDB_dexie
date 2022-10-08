@@ -39,13 +39,13 @@
     <div class="mt-2 flex-row nowrap align-center">
 
       <a (click)="addNewListType()"
-        [ngClass]="!readingListName ? 'btn secondary disabled' : 'btn secondary' "
+        [ngClass]="!readingListName ? 'btn primary disabled' : 'btn primary' "
         >
         Add new list
       </a>
 
       <a
-        [ngClass]="!(readingLists$ | async) ? 'btn primary ml-1 disabled' : 'btn primary ml-1' "
+        [ngClass]="!(readingLists$ | async) ? 'btn accent ml-1 disabled' : 'btn accent ml-1' "
         (click)="resetDatabases()">
         Delete All Lists
       </a>
