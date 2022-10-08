@@ -2,7 +2,7 @@
  * This model defines the name of the Object Stores for this 
  * Reading List and the structure of what objects are stored.
  * ---
- * Created an dexie.constants.ts file to enable 
+ * Created a dexie.constants.ts file to enable 
  * re-usability among multiple models and create more 
  * plain-english friendly code.
  */
