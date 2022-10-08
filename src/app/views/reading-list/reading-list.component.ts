@@ -45,6 +45,7 @@ export class ReadingListComponent implements OnInit {
       author: this.book.author,
       readingListId: this.readingList.id
     })
+    this.book = { title: '', author: '' };
   }
 
   // DELETE READING LIST ITEM
