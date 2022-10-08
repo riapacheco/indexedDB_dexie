@@ -5,6 +5,9 @@
  * Created a dexie.constants.ts file to enable 
  * re-usability among multiple models and create more 
  * plain-english friendly code.
+ * 
+ * Note: in actual implementation - would pull out methods 
+ * from here and app.component.ts to its own service
  */
 
 import Dexie, { Table } from "dexie";
