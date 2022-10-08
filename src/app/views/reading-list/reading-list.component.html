@@ -33,8 +33,12 @@
   </a>
 </div>
 
-<ul class="list-unstyled">
-  <li *ngFor="let book of readingListItems$ | async">
+
+<ul class="list-unstyled pt-2">
+  <h4>
+    Books
+  </h4>
+  <li class="mb-1" *ngFor="let book of readingListItems$ | async">
     {{ book.title }}
   </li>
 </ul>
