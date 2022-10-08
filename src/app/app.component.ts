@@ -17,11 +17,13 @@ export class AppComponent  {
   readingListName = '';
 
   async addNewListType() {
-    await db.readingLists.add({
-      title: this.readingListName
-    });
-
-    this.resetField();
+    if (this.readingListName !== '') {
+      await db.readingLists.add({
+        title: this.readingListName
+      });
+  
+      this.resetField();
+    }
   }
 
   async resetDatabases() {

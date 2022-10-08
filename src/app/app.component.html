@@ -2,6 +2,7 @@
 
 
   <div class="list-item-wrapper">
+    <small>app component</small>
     <h1 class="">
       Manage Reading Lists
     </h1>
@@ -20,23 +21,28 @@
         type="text">
     </div>
 
-    <div class="flex-row nowrap align-end">
+    <div class="mt-2 flex-row nowrap align-center">
 
-      <a
-        (click)="addNewListType()"
-        class="btn secondary mt-2">
+      <a (click)="addNewListType()"
+        [ngClass]="!readingListName ? 'btn secondary disabled' : 'btn secondary' "
+        >
         Add new list
       </a>
 
       <a
-        (click)="resetDatabases()"
-        class="btn primary ml-1">
-        Reset DBs
+        [ngClass]="!(readingLists$ | async) ? 'btn primary ml-1 disabled' : 'btn primary ml-1' "
+        (click)="resetDatabases()">
+        Delete All Lists
       </a>
+
+      <small class="ml-1">
+        <-- Reset DBs
+      </small>
+      
     </div>
 
   </div>
-  <small>app component</small>
+  
 
 
   <!--
@@ -50,7 +56,6 @@
     <app-reading-list
       [readingList]="list">
     </app-reading-list>
-
   </div>
-  <small>reading-list component</small>
+
 </div>
