@@ -1,0 +1,56 @@
+<div class="mx-auto-400px pt-5">
+
+
+  <div class="list-item-wrapper">
+    <h1 class="">
+      Manage Reading Lists
+    </h1>
+    <!-- ADD A NEW LIST -->
+    <div class="form-group mt-3">
+      <label class="caps wide">
+        Add a new reading list
+      </label>
+
+      <input
+        placeholder="Example: 'Woodworking'"
+        autocomplete="off"
+        id="name"
+        #name
+        [(ngModel)]="readingListName"
+        type="text">
+    </div>
+
+    <div class="flex-row nowrap align-end">
+
+      <a
+        (click)="addNewListType()"
+        class="btn secondary mt-2">
+        Add new list
+      </a>
+
+      <a
+        (click)="resetDatabases()"
+        class="btn primary ml-1">
+        Reset DBs
+      </a>
+    </div>
+
+  </div>
+  <small>app component</small>
+
+
+  <!--
+    trackBy =track 
+  -->
+  
+  <div
+    class="list-item-wrapper mt-5"
+    *ngFor="let list of readingLists$ | async; trackBy: readingListTrackBy">
+    
+    <app-reading-list
+      [readingList]="list">
+    </app-reading-list>
+
+  </div>
+  <small>reading-list component</small>
+</div>

@@ -1,0 +1,39 @@
+<h1>
+  Manage Reading List Items
+</h1>
+
+<div class="flex-row nowrap align-center justify-start">
+  <h3 class="pt-1 pr-1">
+  {{ readingList.title }}
+  </h3>
+  <div style="font-size: 11px" class="pt-1">
+    (list name)
+  </div>
+</div>
+<div class="form-group">
+  <label class="caps wide">
+    Add new item
+  </label>
+
+  <input
+    placeholder="'Nudge' by Richard Thaler and Cass Sunstein"
+    autocomplete="off"
+    id="name"
+    #name
+    [(ngModel)]="book.title"
+    type="text">
+</div>
+
+<div class="mt-2">
+  <a
+    (click)="addReadingItem()"
+    class="btn secondary">
+    Add a Book
+  </a>
+</div>
+
+<ul class="list-unstyled">
+  <li *ngFor="let book of readingListItems$ | async">
+    {{ book.title }}
+  </li>
+</ul>

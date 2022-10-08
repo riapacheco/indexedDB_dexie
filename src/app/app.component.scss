@@ -1,0 +1,17 @@
+@import 'node_modules/@riapacheco/yutes/season/two.scss';
+
+:host {
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.list-item-wrapper {
+  border: 2px dashed rgba(0, 0, 0, 0.212);
+  padding: 20px;
+  padding-bottom: 3rem;
+}
+
+small {
+  opacity: 0.2;
+  text-transform: uppercase;
+  font-size: 11px;
+}

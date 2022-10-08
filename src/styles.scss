@@ -1,0 +1,22 @@
+@import 'node_modules/@riapacheco/yutes/main.scss';
+@import 'node_modules/@riapacheco/yutes/season/two.scss';
+
+* {
+  -webkit-font-smoothing: antialiased !important;
+}
+
+html {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.caps {
+  text-transform: uppercase;
+  &.wide {
+    letter-spacing: 0.04rem;
+  }
+}
+
+input::placeholder {
+  opacity: 0.45;
+}
