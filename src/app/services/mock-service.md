@@ -45,6 +45,11 @@ export class ProjectService {
         .toArray();
   }
 
+  /* --------------------------------- CREATE --------------------------------- */
+  async addProject(projectData: IProject) {
+    await pdb.projectItems.add(projectData);
+  }
+
   /* --------------------------------- UPDATE --------------------------------- */
   async updateProject(projectId: number, projectData: IProject) {
     await pdb.projectItems.update(projectId, projectData);
